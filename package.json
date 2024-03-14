@@ -1,5 +1,5 @@
 {
-  "name": "vite-project",
+  "name": "instagit",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,10 +11,12 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
+    "animejs": "^3.2.2",
     "axios": "^1.6.7",
     "bootstrap": "^5.3.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.2",
@@ -30,5 +32,9 @@
     "jsdom": "^24.0.0",
     "vite": "^4.4.5",
     "vitest": "^1.3.1"
-  }
+  },
+  "description": "Instragram for Github users to share profiles access repos and sign up",
+  "main": "vite.config.js",
+  "author": "",
+  "license": "ISC"
 }
