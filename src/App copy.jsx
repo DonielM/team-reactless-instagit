@@ -8,7 +8,6 @@ function App() {
   const [reposData, setReposData] = useState([]);
   const [userName, setUserName] = useState("FilipPaskalev");
   const [inputValue, setInputValue] = useState("");
-
   useEffect(() => {
     fetchData(userName);
     fetchRepos(userName);

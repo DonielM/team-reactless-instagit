@@ -1,5 +1,6 @@
 import "../styles/Home.css";
 
+
 function Home() {
   return (
     <div className="container-fuild py-5 banner">
