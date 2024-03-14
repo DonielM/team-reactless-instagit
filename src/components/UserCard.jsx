@@ -1,4 +1,13 @@
-import { Box, Image, HStack, Tag, Heading, Text, Center, Button} from "@chakra-ui/react";
+import {
+  Box,
+  Image,
+  HStack,
+  Tag,
+  Heading,
+  Text,
+  Center,
+  Button,
+} from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 
 function UserCard() {
@@ -8,6 +17,7 @@ function UserCard() {
   const [reposData, setReposData] = useState([]);
   const [userName, setUserName] = useState("FilipPaskalev");
   const [inputValue, setInputValue] = useState("");
+
   useEffect(() => {
     fetchData(userName);
     fetchRepos(userName);
@@ -39,33 +49,31 @@ function UserCard() {
     }
   };
 
-  return(
+  return (
     <Box maxw="sm" bg="black.100" h="100vh" width="100vh">
-      <Box maxW='420px' bg=''white p='6'>
-       <Image src={userData.avatar_url} alt="A place holder image for the user profile" borderRadius='xl' objectFit='cover'mx='auto'/>
-        <HStack mt='5' spacing='3'>
-          {['Repos', 'follwing', 'followers'].map((item) => (
-          <Tag key={item} variant='outline'>
-            {item}
-          </Tag>
-          ))}
+      <Box maxW="420px" bg="" white p="6">
+        {userData && (
+          <Image
+            src={userData.avatar_url}
+            alt="A place holder image for the user profile"
+            borderRadius="xl"
+            objectFit="cover"
+            mx="auto"
+          />
+        )}
+        <HStack mt="5" spacing="3">
+          <Tag variant="outline">Repos {reposData}</Tag>
+          <Tag variant="outline">Following {userData.following}</Tag>
+          <Tag variant="outline">Following {userData.following}</Tag>
         </HStack>
-        <Heading my='4'size="lg">
-          User Profile
+        <Heading my="4" size="lg">
+          {userData.name}
         </Heading>
-        <Text>
-          User Description
-        </Text>
-        <Center my='6'/>
-          <Button colorScheme='blue'>
-        
-          More  info
-        </Button>
-    <Box/>
-    
-
+        <Text>User Description</Text>
+        <Center my="6" />
+        <Button colorScheme="blue">More info</Button>
+        <Box />
       </Box>
-
     </Box>
   );
 }
