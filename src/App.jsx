@@ -2,6 +2,7 @@ import React from "react";
 import ReactDom from "react-dom";
 // import reactLogo from "./assets/react.svg";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer";
 import Header from "./components/Header.jsx";
 import Home from "./components/Home.jsx";
 import Contact from "./components/Contact.jsx";
