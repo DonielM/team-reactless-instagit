@@ -8,6 +8,7 @@ import Home from "./components/Home.jsx";
 import Contact from "./components/Contact.jsx";
 import "./App.css";
 import UserCard from "./components/UserCard.jsx";
+import Timeline from "./components/Timeline.jsx";
 
 function App() {
   return (

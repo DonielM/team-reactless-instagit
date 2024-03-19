@@ -9,7 +9,11 @@ function Header() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
+<<<<<<< HEAD
+                <a className="navbar-brand "><img src="../src/assets/InstaGitLogobyDesigner.png" /> InstaGit </a>
+=======
                 <a className="navbar-brand" href="#"><img src={logo} alt="Logo" /> InstaGit </a>
+>>>>>>> ec59f61ce5a4a30d9edc0ad32cef0743070038ca
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
