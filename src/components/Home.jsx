@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import anime from 'animejs/lib/anime.es.js';
 
 
+
 function Home() {
   const [isAnimating, setIsAnimating] = useState(false);
   const startAnimation = () => {
@@ -61,10 +62,11 @@ function Home() {
 
             </div>
 
+
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
   }
   
