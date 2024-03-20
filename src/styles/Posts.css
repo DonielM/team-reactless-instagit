@@ -37,13 +37,20 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  height: 50px;
 }
 
 .postIcon {
   padding: 7px;
   font-size: 30px;
+  height: 50px;
+  font-size:"large";
+
 }
 
 .postIcon :hover {
   cursor: pointer;
+}
+.avatar{
+  height: 50px;
 }

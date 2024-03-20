@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import logo from "../../src/assets/images/logo4.png";
+// import logo from "../../src/assets/images/logo4.png";
 import "../styles/Header.css";
 
 function Header() {
@@ -10,11 +10,10 @@ function Header() {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
         <a className="navbar-brand ">
-          <img src="../src/assets/InstaGitLogobyDesigner.png" /> InstaGit{" "}
         </a>
 
         <a className="navbar-brand" href="#">
-          <img src={logo} alt="Logo" /> InstaGit{" "}
+          <img src="../src/assets/images/InstaGitLogobyDesigner.png"alt="Logo" /> InstaGit{" "}
         </a>
         <button
           className="navbar-toggler"
