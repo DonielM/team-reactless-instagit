@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Contactform.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -40,25 +41,25 @@ function ContactForm() {
   };
 
   return (
-    <form className="new-form" onSubmit={handleSubmit}>
+    <form className="new-form " onSubmit={handleSubmit}>
       <label>
         <span>Name:</span>
-        <input type="text" name="name" value={formData.name} onChange={handleChange} />
+        <input type="text"  className="form-control border border-primary" name="name"  value={formData.name} onChange={handleChange} />
       </label>
 
       <label>
         <span>Contact number:</span>
-        <input type="text" name="contactNumber" value={formData.contactNumber} onChange={handleChange} />
+        <input type="text"  className="form-control border border-primary" name="contactNumber" value={formData.contactNumber} onChange={handleChange} />
       </label>
 
       <label>
         <span>Email</span>
-        <input type="text" name="email" value={formData.email} onChange={handleChange} />
+        <input type="text"  className="form-control border border-primary" name="email" value={formData.email} onChange={handleChange} />
       </label>
 
       <label>
         <span>Leave me messages</span>
-        <input type="text" name="message" value={formData.message} onChange={handleChange} />
+        <input type="text"  className="form-control border border-primary" name="message" value={formData.message} onChange={handleChange} />
       </label>
 
       <button type="submit">Submit</button>

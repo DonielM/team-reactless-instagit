@@ -1,5 +1,6 @@
 import "../styles/SearchBtn.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { useState } from "react";
 import Autosuggest from "react-autosuggest";
 
@@ -66,22 +67,23 @@ function SearchBtn() {
   };
 
   const inputProps = {
-    placeholder: "Please input the username / REPO",
+    placeholder: "Please input the username",
+    className:"form-control custom-border",
     value: inputValue,
     onChange: onChange,
   };
 
   return (
-    <section className="py-5 text-center container" id="searchContainer">
-      <div className="row py-lg-5">
+    <section className="py-5 text-center container " id="searchContainer">
+      <div className="row py-lg-8">
         <div className="col-lg-6 col-md-8 mx-auto">
           <h2 className="fw-light">Search Github Username or Repo </h2>
           <p className="lead text-muted">
             Start by searching for username or name of repo that you want to
             view.
           </p>
-          <div className="container">
-            <div className="d-flex justify-content-center">
+          <div className="container-fluid search-container">
+            <div className="d-flex align-items-center justify-content-center">
               <Autosuggest
                 suggestions={suggestions}
                 onSuggestionsFetchRequested={onSuggestionsFetchRequested}
@@ -91,7 +93,7 @@ function SearchBtn() {
                 inputProps={inputProps}
                 onSuggestionSelected={onSuggestionSelected}
               />
-              <button
+                <button
                 className="btn btn-outline-warning my-3 mb-3"
                 onClick={handleSearch}
               >

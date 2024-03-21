@@ -7,9 +7,12 @@
     background-color:transparent;
     padding-bottom:5px;
     border-radius: 10px;  
-     
+    border-color:rgb(17, 255, 0);
 }
-
+.new-form{
+    border:3px;
+    border-color:white;
+}
 
 .new-form input:hover{
     color: rgb(7, 26, 134);
@@ -37,6 +40,7 @@
     justify-content: center;
     align-items: center;
     padding: 2rem;
+   
 
    
     margin:8px 3px 8px 3px;
