@@ -7,7 +7,7 @@ import Header from "./components/Header.jsx";
 import Home from "./components/Home.jsx";
 import Contact from "./components/Contact.jsx";
 import "./App.css";
-import UserCard from "./components/UserCard.jsx";
+// import UserCard from "./components/UserCard.jsx";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           <Route path="Contact" element={<Contact />} />
         </Routes>
 
-        <UserCard/>
+        {/* <UserCard/> */}
       </Router>
   );
 }

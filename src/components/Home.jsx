@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import "../styles/Home.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import anime from 'animejs/lib/anime.es.js';
-
+import FixedCards from '../components/FixedCards'
 
 
 function Home() {
@@ -66,7 +66,8 @@ function Home() {
           </div>
         </div>
       </div>
-    </div>
+      <FixedCards/>
+    </>
   );
   }
   
