@@ -3,7 +3,8 @@ import "../styles/Home.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import anime from "animejs/lib/anime.es.js";
 import SearchBtn from "./SearchBtn";
-
+import UserCard from "./UserCard";
+import Homepage from "./Homepage";
 function Home() {
   const [isAnimating, setIsAnimating] = useState(false);
   const startAnimation = () => {
@@ -57,7 +58,11 @@ function Home() {
           </div>
         </div>
       </div>
-      <SearchBtn />
+      
+      
+      <SearchBtn/>
+      <Homepage/>
+      <UserCard/>
     </>
   );
 }

@@ -32,7 +32,7 @@ function UserCard() {
       console.error("Error fetching user data: ", error);
     }
   };
-
+ 
   const fetchRepos = async (user) => {
     try {
       const response = await fetch(reposURL + user + "/repos");
@@ -51,9 +51,11 @@ function UserCard() {
 
   return (
     <>
+    <div className="usercards-1">
+      <h1 justify-content-center align-items-center> Favorite REPOS</h1>
       {userData && reposData && (
         <Box maxw="sm" bg="black.100" h="100vh" width="100vh">
-          <Box maxW="420px" bg="" white p="6">
+          <Box maxW="400px" bg="" white p="6">
             <Image
               src={userData.avatar_url}
               alt="A place holder image for the user profile"
@@ -78,6 +80,7 @@ function UserCard() {
           </Box>
         </Box>
       )}
+      </div>
     </>
   );
 }
