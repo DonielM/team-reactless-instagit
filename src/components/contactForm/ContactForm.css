@@ -1,0 +1,81 @@
+.new-form label,
+.new-form input {
+    display: block;
+    text-align: left;
+    font-size: 30px;
+    color: rgb(7, 26, 134);
+    background-color: transparent;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    border-color: rgb(17, 255, 0);
+}
+
+.new-form {
+    border: 3px;
+    border-color: white;
+}
+
+.new-form input:hover {
+    color: rgb(7, 26, 134);
+    border-color: #11024f;
+    border-width: 3px;
+}
+
+.new-form button {
+    background-color: #e9760b;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    text-decoration: solid;
+    display: inline-block;
+    font-size: 30px;
+    margin: 15px 2px;
+    cursor: pointer;
+
+}
+
+.new-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+
+
+    margin: 8px 3px 8px 3px;
+
+    background: linear-gradient(106.8deg, rgb(117, 255, 220) 6%, rgb(163, 216, 255) 47.6%, rgb(248, 215, 251) 87.8%);
+}
+
+@media screen and (max-width: 600px) {
+
+    .new-form label,
+    .new-form input {
+        display: block;
+        text-align: left;
+        font-size: 20px;
+        color: rgb(7, 26, 134);
+        background-color: transparent;
+        padding-bottom: 5px;
+        border-radius: 10px;
+
+    }
+
+    .new-form button {
+        background-color: #e9760b;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        text-decoration: solid;
+        display: inline-block;
+        font-size: 20px;
+        margin: 15px 2px;
+        cursor: pointer;
+
+    }
+}

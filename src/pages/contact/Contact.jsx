@@ -2,7 +2,7 @@ import "./Contact.css";
 import Footer from "../../components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import Contactform from "../../components/Contactform";
+import ContactForm from "../../components/contactForm/ContactForm.jsx";
 
 function Contact() {
   return (
@@ -13,7 +13,7 @@ function Contact() {
           <h1>Get connected to our insights</h1>
         </div>
       </div>
-      <Contactform />
+      <ContactForm />
       <Footer />
     </>
   );
