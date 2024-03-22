@@ -39,7 +39,7 @@ function Home() {
                 className="circle-image"
                 src="../src/assets/images/Repo.jpg"
               />
-              <div className="circle-text">Git repositories</div>
+              <div className="circle-text">Git repositories hi</div>
             </div>
             <div className="circle">
               <img
@@ -61,8 +61,9 @@ function Home() {
       
       
       <SearchBtn/>
-      <Homepage/>
       <UserCard/>
+      <Homepage/>
+      
     </>
   );
 }
