@@ -61,8 +61,9 @@ function Home() {
       
       
       <SearchBtn/>
-      <Homepage/>
       <UserCard/>
+      <Homepage/>
+      
     </>
   );
 }

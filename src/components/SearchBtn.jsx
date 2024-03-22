@@ -5,7 +5,7 @@ import { useState } from "react";
 import Autosuggest from "react-autosuggest";
 
 function SearchBtn() {
-  const token = import.meta.env.VITE_GITHUB_API_KEY;
+  const token = "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";
   const [inputValue, setInputValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
 
@@ -77,7 +77,7 @@ function SearchBtn() {
     <section className="py-5 text-center container " id="searchContainer">
       <div className="row py-lg-8">
         <div className="col-lg-6 col-md-8 mx-auto">
-          <h2 className="fw-light">Search Github Username or Repo </h2>
+          <h2 className="fw-light">Search Github Username  </h2>
           <p className="lead text-muted">
             Start by searching for username or name of repo that you want to
             view.
