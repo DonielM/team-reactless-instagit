@@ -15,7 +15,7 @@ function UserCard() {
   const reposURL = "https://api.github.com/users/";
   const [userData, setUserData] = useState({});
   const [reposData, setReposData] = useState({});
-  // const token = import.meta.env.VITE_GITHUB_API_KEY;
+
   const [usernames] = useState(["FilipPaskalev", "vickyw0102", "Doniel","irtiza-S","Aysegulozen"]);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ function UserCard() {
       try {
         const response = await fetch(userURL + username, {
           headers: {
-            Authorization: `token ${token}`,
+            // Authorization: `token ${token}`,
           },
         });
         if (!response.ok) {
@@ -37,7 +37,7 @@ function UserCard() {
     
         const reposResponse = await fetch(reposURL + username + "/repos", {
           headers: {
-            Authorization: `token ${token}`,
+            // Authorization: `token ${token}`,
           },
         });
         if (!reposResponse.ok) {

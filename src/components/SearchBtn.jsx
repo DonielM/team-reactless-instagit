@@ -5,7 +5,7 @@ import { useState } from "react";
 import Autosuggest from "react-autosuggest";
 
 function SearchBtn() {
-  // const token = import.meta.env.VITE_GITHUB_API_KEY;
+ 
   const [inputValue, setInputValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
 
@@ -16,7 +16,7 @@ function SearchBtn() {
         {
           method: "GET",
           headers: {
-            Authorization: `token ${token}`,
+            // Authorization: `token ${token}`,
             Accept: "application/vnd.github.v3+json",
           },
         }
@@ -37,7 +37,7 @@ function SearchBtn() {
       {
         method: "GET",
         headers: {
-          Authorization: `token ${token}`,
+        //  Authorization: `token ${token}`, 
           Accept: "application/vnd.github.v3+json",
         },
       }
