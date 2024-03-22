@@ -5,7 +5,7 @@ import { useState } from "react";
 import Autosuggest from "react-autosuggest";
 
 function SearchBtn() {
-  const token = import.meta.env.VITE_GITHUB_API_KEY;
+  // const token = import.meta.env.VITE_GITHUB_API_KEY;
   const [inputValue, setInputValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
 
