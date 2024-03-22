@@ -1,4 +1,4 @@
-import "../styles/footer.css";
+import "./Footer.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function Footer() {
@@ -16,7 +16,7 @@ function Footer() {
                   <h4>📞 Phone: (+44) 077xx xxxxxx</h4>
                   <h4>🏡Address: Rmxx, 1 Street, Birmingham B..xxx</h4>
                   <h4>
-                    📧Email:<a href="mailto:abc@gmailcom"> abv@gmail.com</a>{" "}
+                    📧Email:<a href="mailto:abc@gmail.com"> abv@gmail.com</a>{" "}
                   </h4>
                 </div>
 

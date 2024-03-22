@@ -1,7 +1,7 @@
 import "./Contact.css";
-import Footer from "../../components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import Footer from "../../components/footer/Footer.jsx";
 import ContactForm from "../../components/contactForm/ContactForm.jsx";
 
 function Contact() {
