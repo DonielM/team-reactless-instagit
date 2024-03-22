@@ -5,6 +5,8 @@ import anime from "animejs/lib/anime.es.js";
 import SearchBtn from "./SearchBtn";
 import UserCard from "./UserCard";
 import Homepage from "./Homepage";
+import repo from "/src/assets/images/Repo.jpg"
+import paramater from "/src/assets/images/parameter1.jpg"
 function Home() {
   const [isAnimating, setIsAnimating] = useState(false);
   const startAnimation = () => {
@@ -37,14 +39,14 @@ function Home() {
             <div className="circle">
               <img
                 className="circle-image"
-                src="../src/assets/images/Repo.jpg"
+                src= {repo}
               />
               <div className="circle-text">Git repositories hi</div>
             </div>
             <div className="circle">
               <img
                 className="circle-image"
-                src="../src/assets/images/parameter1.jpg"
+                src={paramater}
               />
               <div className="circle-text">Code sharing </div>
             </div>

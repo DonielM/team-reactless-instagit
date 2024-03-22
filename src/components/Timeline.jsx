@@ -1,34 +1,35 @@
 import React, { useState } from "react";
 import Post from "./Posts";
 import "../styles/Timeline.css";
+import wwGif from "../assets/images/WWdemo.gif";
+import schedulerGif from "../assets/images/scheduler.gif";
+import passwordGif from "../assets/images/PasswordGen.gif";
+import javaQuizGif from "../assets/images/JavaQuiz.gif";
+
 
 function Timeline() {
   const [posts, setPosts] = useState([
     {
       user: "redian_",
-      postImage:
-        "../src/assets/images/WWdemo.gif",
+      postImage: wwGif,
       likes: 54,
       timestamp: "2d",
     },
     {
       user: "johndoe",
-      postImage:
-        "../src/assets/images/scheduler.gif",
+      postImage: schedulerGif,
       likes: 432,
       timestamp: "2d",
     },
     {
       user: "mariussss",
-      postImage:
-        "../src/assets/images/PasswordGen.gif",
+      postImage: passwordGif,
       likes: 140,
       timestamp: "2d",
-    },
+    },  
     {
       user: "kobee_18",
-      postImage:
-        "../src/assets/images/JavaQuiz.gif",
+      postImage: javaQuizGif,
       likes: 14,
       timestamp: "2d",
     },
