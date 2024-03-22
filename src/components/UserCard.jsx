@@ -15,7 +15,7 @@ function UserCard() {
   const reposURL = "https://api.github.com/users/";
   const [userData, setUserData] = useState({});
   const [reposData, setReposData] = useState({});
-  const token = "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";
+  const token = import.meta.env.VITE_GITHUB_API_KEY;
   const [usernames] = useState(["FilipPaskalev", "vickyw0102", "Doniel","irtiza-S","Aysegulozen"]);
 
   useEffect(() => {
