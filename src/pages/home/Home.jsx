@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import anime from "animejs/lib/anime.es.js";
 import SearchBtn from "../../components/SearchBtn";
 import UserCard from "../../components/UserCard";
-import Homepage from "../../components/Homepage";
+import Homepage from "../homePage/Homepage";
 // Images
 import repoImg from "/src/assets/images/Repo.jpg";
 import parameterImg from "/src/assets/images/parameter1.jpg";
