@@ -1,45 +1,38 @@
 import React, { useState } from "react";
 import Post from "./Posts";
 import "../styles/Timeline.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 function Timeline() {
-  const posts=[
+  const [posts, setPosts] = useState([
     {
       user: "redian_",
-      key:1,
       postImage:
-        "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
+        "../src/assets/images/WWdemo.gif",
       likes: 54,
       timestamp: "2d",
     },
     {
       user: "johndoe",
-      key:2,
       postImage:
-        "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8&w=1000&q=80",
+        "../src/assets/images/scheduler.gif",
       likes: 432,
       timestamp: "2d",
     },
     {
       user: "mariussss",
-      key:3,
       postImage:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png",
+        "../src/assets/images/PasswordGen.gif",
       likes: 140,
       timestamp: "2d",
     },
     {
       user: "kobee_18",
-      key:4,
       postImage:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png",
+        "../src/assets/images/JavaQuiz.gif",
       likes: 14,
       timestamp: "2d",
     },
-  ];
-
+  ]);
   const chunkArray = (arr, size) => {
     const chunkedArray = [];
     for (let i = 0; i < arr.length; i += size) {
