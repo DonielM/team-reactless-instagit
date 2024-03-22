@@ -1,12 +1,14 @@
 .usercards-1{
     max-width: 300px;
     height:300px;
+    border-color: grey;
 }
 
 .usercards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around; /* Adjust as needed */
+    border-color: grey;
   }
   
   .usercard {
