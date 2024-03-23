@@ -2,6 +2,7 @@
   max-width: 300px;
   height: 300px;
   border-color: grey;
+ 
 }
 
 .usercards-container {
@@ -10,6 +11,7 @@
   justify-content: space-around;
   /* Adjust as needed */
   border-color: grey;
+
 }
 
 .usercard {
@@ -17,4 +19,48 @@
   /* Adjust the width of each card as needed */
   margin: 10px;
   /* Adjust the margin between cards as needed */
+
+}
+
+/* .usercard Box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+} */
+
+@media screen and (max-width: 600px) {
+
+  
+.usercards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* Adjust as needed */
+  border-color: grey;
+
+}
+
+.usercard {
+  width: 100%;
+
+  margin: 10px;
+ 
+
+}
+}
+
+@media screen and (max-width: 600px) {
+  
+.usercard {
+  width: 100%;
+
+  margin: 10px;
+ 
+
+}
+  
 }

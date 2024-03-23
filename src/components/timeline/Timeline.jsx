@@ -50,25 +50,31 @@ function Timeline() {
 
   const postsRows = chunkArray(posts, 4);
   return (
-    <div className="timeline container-fluid">
-      {postsRows.map((row, index) => (
-        <div key={index} className="row mb-3">
-          {row.map((post, postIndex) => (
-            <div
-              key={postIndex}
-              className="col-lg-6 d-flex justify-content-center"
-            >
-              <Post
-                user={post.user}
-                postImage={post.postImage}
-                likes={post.likes}
-                timestamp={post.timestamp}
-              />
+    <>
+      <h1 className=" text-white py-5" id="git-repositories-section"
+      style={{fontSize:"30px"}}> Git Repositories</h1>
+        <div className="timeline container">
+          {postsRows.map((row, index) => (
+            <div key={index} className="row mb-3">
+              {row.map((post, postIndex) => (
+                <div
+                  key={postIndex}
+                  className="col-lg-6 d-flex justify-content-center"
+                >
+                  <Post
+                    user={post.user}
+                    postImage={post.postImage}
+                    likes={post.likes}
+                    timestamp={post.timestamp}
+                  />
+                </div>
+              ))}
             </div>
           ))}
         </div>
-      ))}
-    </div>
+        {/* </div>
+      </div> */}
+    </>
   );
 }
 
