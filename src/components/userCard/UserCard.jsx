@@ -17,7 +17,6 @@ import {
 
 // Data
 import usersData from "../../data/users.json";
-import GitHubCard from "../gitHubCard/GitHubCard";
 
 const UserCard = () => {
   const renderUserCard = (
@@ -29,6 +28,9 @@ const UserCard = () => {
     bio
   ) => {
     const githubUrl = `https://github.com/${login}`;
+    const reposUrl = `${githubUrl}?tab=repositories`;
+    const followingUrl = `${githubUrl}?tab=following`;
+    const followersUrl = `${githubUrl}?tab=followers`;
     const linkedinUrl = `https://www.linkedin.com/in/${login}`;
 
     return (
@@ -51,9 +53,27 @@ const UserCard = () => {
             mx="auto"
           />
           <HStack mt="5" spacing="3">
-            <Tag variant="outline">Repos {reposAmount}</Tag>
-            <Tag variant="outline">Following {followingAmount}</Tag>
-            <Tag variant="outline">Followers {followersAmount}</Tag>
+            <Tag
+              variant="outline"
+              onClick={() => window.open(reposUrl)}
+              style={{ cursor: "pointer" }}
+            >
+              Repos {reposAmount}
+            </Tag>
+            <Tag
+              variant="outline"
+              onClick={() => window.open(followingUrl)}
+              style={{ cursor: "pointer" }}
+            >
+              Following {followingAmount}
+            </Tag>
+            <Tag
+              variant="outline"
+              onClick={() => window.open(followersUrl)}
+              style={{ cursor: "pointer" }}
+            >
+              Followers {followersAmount}
+            </Tag>
           </HStack>
           <Heading my="4" size="lg">
             {login}
@@ -104,7 +124,6 @@ const UserCard = () => {
             </a>
           </Center>
         </Box>
-        <GitHubCard userName={login} />
       </div>
     );
   };
