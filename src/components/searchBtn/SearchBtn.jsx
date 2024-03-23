@@ -1,26 +1,27 @@
-import "../styles/SearchBtn.css";
+// Hooks
+import { useState } from "react";
+
+// Styles
+import "./SearchBtn.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import { useState } from "react";
+
+// Components
 import Autosuggest from "react-autosuggest";
 
 function SearchBtn() {
- 
   const [inputValue, setInputValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
+  const gitHubUrl = "https://api.github.com/search/users?q=";
 
   const handleSearch = async () => {
     try {
-      const response = await fetch(
-        `https://api.github.com/search/users?q=${inputValue}`,
-        {
-          method: "GET",
-          headers: {
-            // Authorization: `token ${token}`,
-            Accept: "application/vnd.github.v3+json",
-          },
-        }
-      );
+      const response = await fetch(`${gitHubUrl}${inputValue}`, {
+        method: "GET",
+        headers: {
+          Accept: "application/vnd.github.v3+json",
+        },
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -32,16 +33,12 @@ function SearchBtn() {
   };
 
   const getSuggestions = async (value) => {
-    const response = await fetch(
-      `https://api.github.com/search/users?q=${value}`,
-      {
-        method: "GET",
-        headers: {
-        //  Authorization: `token ${token}`, 
-          Accept: "application/vnd.github.v3+json",
-        },
-      }
-    );
+    const response = await fetch(`${gitHubUrl}${value}`, {
+      method: "GET",
+      headers: {
+        Accept: "application/vnd.github.v3+json",
+      },
+    });
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -68,7 +65,7 @@ function SearchBtn() {
 
   const inputProps = {
     placeholder: "Please input the username",
-    className:"form-control custom-border",
+    className: "form-control custom-border",
     value: inputValue,
     onChange: onChange,
   };
@@ -77,10 +74,9 @@ function SearchBtn() {
     <section className="py-5 text-center container " id="searchContainer">
       <div className="row py-lg-8">
         <div className="col-lg-6 col-md-8 mx-auto">
-          <h2 className="fw-light">Search Github Username  </h2>
+          <h2 className="fw-light">Search Github Username </h2>
           <p className="lead text-muted">
-            Start by searching for username or name of repo that you want to
-            view.
+            Start by searching for username or name that you want to view.
           </p>
           <div className="container-fluid search-container">
             <div className="d-flex align-items-center justify-content-center">
@@ -93,7 +89,7 @@ function SearchBtn() {
                 inputProps={inputProps}
                 onSuggestionSelected={onSuggestionSelected}
               />
-                <button
+              <button
                 className="btn btn-outline-warning my-3 mb-3"
                 onClick={handleSearch}
               >

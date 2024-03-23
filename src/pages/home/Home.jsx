@@ -1,10 +1,18 @@
+// Hooks
 import { useState, useEffect } from "react";
+
+// Styles
 import "./Home.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+
+// Animations
 import anime from "animejs/lib/anime.es.js";
-import SearchBtn from "../../components/SearchBtn";
+
+// Components
+import SearchBtn from "../../components/searchBtn/SearchBtn.jsx";
 import UserCard from "../../components/UserCard";
-import Homepage from "../homePage/Homepage";
+import Homepage from "../../pages/homePage/Homepage.jsx";
+
 // Images
 import repoImg from "/src/assets/images/Repo.jpg";
 import parameterImg from "/src/assets/images/parameter1.jpg";
