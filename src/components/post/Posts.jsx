@@ -12,7 +12,7 @@ import PropTypes from "prop-types";
 
 function Post({ user, postImage, following, likes, timestamp }) {
   return (
-    <div className="post">
+    <div className="post postBorder">
       <div className="post__header">
         <div className="post__headerAuthor">
           <img
