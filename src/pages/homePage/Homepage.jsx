@@ -1,7 +1,10 @@
+// Styles
 import "./Homepage.css";
-import Timeline from "../../components/Timeline";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
+// Components
+import Timeline from "../../components/timeline/Timeline.jsx";
 
 function Homepage() {
   return (

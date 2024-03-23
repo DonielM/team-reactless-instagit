@@ -1,16 +1,17 @@
+// Hooks
 import { useState } from "react";
 
 // Components
-import Post from "../components/post/Posts.jsx";
+import Post from "../post/Posts.jsx";
 
 // Styles
-import "../styles/Timeline.css";
+import "./Timeline.css";
 
 // Images
-import wwGif from "../assets/images/WWdemo.gif";
-import schedulerGif from "../assets/images/scheduler.gif";
-import passwordGif from "../assets/images/PasswordGen.gif";
-import javaQuizGif from "../assets/images/JavaQuiz.gif";
+import wwGif from "../../assets/images/WWdemo.gif";
+import schedulerGif from "../../assets/images/scheduler.gif";
+import passwordGif from "../../assets/images/PasswordGen.gif";
+import javaQuizGif from "../../assets/images/JavaQuiz.gif";
 
 function Timeline() {
   const [posts, setPosts] = useState([
