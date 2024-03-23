@@ -1,5 +1,7 @@
 // Hooks
-import { useState, useEffect } from "react";
+
+// Icons
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 // Components
 import {
@@ -10,90 +12,93 @@ import {
   Heading,
   Text,
   Center,
-  Button,
+  IconButton,
 } from "@chakra-ui/react";
 
+// Data
+import usersData from "../../data/users.json";
+
 const UserCard = () => {
-  const gitHubUrl = "https://api.github.com/users/";
+  const renderUserCard = (
+    login,
+    avatarUrl,
+    reposAmount,
+    followersAmount,
+    followingAmount,
+    bio
+  ) => {
+    const githubUrl = `https://github.com/${login}`;
+    const linkedinUrl = `https://www.linkedin.com/in/${login}`;
 
-  const [userData, setUserData] = useState({});
-  const [reposData, setReposData] = useState({});
-
-  const [usernames] = useState([
-    "FilipPaskalev",
-    "vickyw0102",
-    "Doniel",
-    "irtiza-S",
-    "Aysegulozen",
-  ]);
-
-  useEffect(() => {
-    const fetchData = async (username) => {
-      try {
-        const response = await fetch(gitHubUrl + username, {
-          headers: {},
-        });
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const userData = await response.json();
-        setUserData((prevData) => ({
-          ...prevData,
-          [username]: userData,
-        }));
-
-        const reposResponse = await fetch(gitHubUrl + username + "/repos", {
-          headers: {},
-        });
-        if (!reposResponse.ok) {
-          throw new Error(`HTTP error! status: ${reposResponse.status}`);
-        }
-        const reposData = await reposResponse.json();
-        setReposData((prevData) => ({
-          ...prevData,
-          [username]: reposData,
-        }));
-      } catch (error) {
-        console.error("Error fetching data: ", error);
-      }
-    };
-
-    usernames.forEach((username) => fetchData(username));
-  }, [usernames]);
+    return (
+      <div key={login} className="usercard">
+        <Box
+          maxW="400px"
+          bg="gray.100" // Change background color to gray
+          white
+          p="6"
+          mt="6"
+          borderWidth="1px"
+          borderRadius="lg"
+          shadow="md" // Add shadow
+        >
+          <Image
+            src={avatarUrl}
+            alt="A place holder image for the user profile"
+            borderRadius="xl"
+            objectFit="cover"
+            mx="auto"
+          />
+          <HStack mt="5" spacing="3">
+            <Tag variant="outline">Repos {reposAmount}</Tag>
+            <Tag variant="outline">Following {followingAmount}</Tag>
+            <Tag variant="outline">Followers {followersAmount}</Tag>
+          </HStack>
+          <Heading my="4" size="lg">
+            {login}
+          </Heading>
+          <Text>{bio}</Text>
+          <Center my="6">
+            {/* GitHub button */}
+            <IconButton
+              as="a"
+              href={githubUrl}
+              target="_blank"
+              aria-label="GitHub"
+              icon={<FaGithub />}
+              colorScheme="gray"
+              variant="outline"
+              mr="2"
+            />
+            {/* LinkedIn button */}
+            <IconButton
+              as="a"
+              href={linkedinUrl}
+              target="_blank"
+              aria-label="LinkedIn"
+              icon={<FaLinkedin />}
+              colorScheme="gray"
+              variant="outline"
+            />
+          </Center>
+        </Box>
+      </div>
+    );
+  };
 
   return (
     <>
       <div className="usercards-container">
-        {usernames.map((username) => (
-          <div key={username} className="usercard">
-            <Box maxW="400px" bg="" white p="6" mt="6">
-              <Image
-                src={userData[username]?.avatar_url}
-                alt="A place holder image for the user profile"
-                borderRadius="xl"
-                objectFit="cover"
-                mx="auto"
-              />
-              <HStack mt="5" spacing="3">
-                <Tag variant="outline">Repos {reposData[username]?.length}</Tag>
-                <Tag variant="outline">
-                  Following {userData[username]?.following}
-                </Tag>
-                <Tag variant="outline">
-                  Followers {userData[username]?.followers}
-                </Tag>
-              </HStack>
-              <Heading my="4" size="lg">
-                {userData[username]?.name}
-              </Heading>
-              <Text>{userData[username]?.bio}</Text>
-              <Center my="6" />
-              {/* You can add additional functionality here */}
-              <Button colorScheme="blue">More info</Button>
-              <Box />
-            </Box>
-          </div>
-        ))}
+        {usersData.map((user) =>
+          renderUserCard(
+            user.login,
+            user.avatar_url,
+            user.public_repos,
+            user.followers,
+            user.following,
+            user.bio
+          )
+        )}
       </div>
     </>
   );
