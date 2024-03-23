@@ -12,7 +12,9 @@ import anime from "animejs/lib/anime.es.js";
 import SearchBtn from "../../components/searchBtn/SearchBtn.jsx";
 import UserCard from "../../components/userCard/UserCard.jsx";
 import Homepage from "../homePage/Homepage.jsx";
-import Footer from "../../components/Footer/Footer.jsx"
+
+import Footer from "../../components/footer/Footer.jsx"
+
 
 // Images
 import repoImg from "/src/assets/images/Repo.jpg";
