@@ -17,9 +17,19 @@ Instagram for GitHub users to share profiles access repos and sign up.
   - [Installation](#installation)
     - [Option 1 - Download](#option-1---download)
     - [Option 2 - Clone project](#option-2---clone-project)
-  - [Technologies Used](#technologies-used)
-  - [Project Requirements](#project-requirements)
   - [Usage](#usage)
+    - [Start the application](#start-the-application)
+  - [Technologies](#technologies)
+  - [Tools and extensions](#tools-and-extensions)
+    - [Visual Studio Code](#visual-studio-code)
+    - [VS Code Counter](#vs-code-counter)
+    - [JSDoc 4.0.2](#jsdoc-402)
+    - [Prettier 3.2.5](#prettier-325)
+  - [Project Requirements](#project-requirements)
+  - [Statistics](#statistics)
+    - [Languages](#languages)
+    - [Directories](#directories)
+  - [Contributing](#contributing)
   - [License](#license)
   - [Contact](#contact)
   
@@ -106,17 +116,66 @@ Download the project from GitHub [repository](https://github.com/DonielM/team-re
     > remove: Total 10 (delta 1), reused 10 (delta 1)
     > Unpacking objects: 100% (10/10), done.
     ```
+## Usage
 
-## Technologies Used
+### Start the application
 
-- HTML5
-- CSS
-- Bootstrap
-- JavaScript
-- React JS
-- Anima.js
-- GitHub API
-- Subscription form
+To start the application, run the following command in your terminal:
+
+```bash
+npm start
+```
+
+## Technologies
+
+- [Node.js *v21.6.1*](https://nodejs.org/en)
+- [HTML](https://html.com/)
+- [Bootstrap](https://getbootstrap.com/)
+- [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
+- [JavaScript](https://www.javascript.com/)
+- [Prettier *v3.2.5*](https://prettier.io/)
+- [Git](https://git-scm.com/)
+- [JSDoc *v4.0.2*](https://jsdoc.app/)
+- [React JS](https://reactjs.org/)
+- [Anima.js](https://animaapp.com/)
+
+## Tools and extensions
+
+### Visual Studio Code
+
+[Visual Studio Code](https://code.visualstudio.com/) is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages and runtime (such as C++, C#, Java, Python, PHP, Go, .NET).
+
+### VS Code Counter
+
+[VS Code extension](https://marketplace.visualstudio.com/items?itemName=uctakeoff.vscode-counter) counts blank lines, comment lines, and physical lines of source code in many programming languages. This extension uses other language extensions to determine the line of code. Therefore, you may need to install the language extension to support a new language. Conversely, as the number of language extensions increases, the range of support for this feature also increases.
+
+### JSDoc 4.0.2
+
+[JSDoc 3](https://jsdoc.app/about-getting-started) is an API documentation generator for JavaScript, similar to Javadoc. You add documentation comments directly to your source code, right alongside the code itself. The JSDoc tool will scan your source code and generate an HTML documentation website for you.
+
+JSDoc's purpose is to document the API of your JavaScript application or library. It is assumed that you will want to document things like modules, namespaces, classes, methods, method parameters, and so on.
+
+### Prettier 3.2.5
+
+Prettier is an opinionated code formatter with support for:
+
+- JavaScript (including experimental features)
+- JSX
+- Angular
+- Vue
+- Flow
+- TypeScript
+- CSS, Less, and SCSS
+- HTML
+- Ember/Handlebars
+- JSON
+- GraphQL
+- Markdown, including GFM and MDX v1
+- YAML
+
+It removes all original styling* and ensures that all outputted code conforms to a consistent style. (See this [blog post](https://archive.jlongster.com/A-Prettier-Formatter))
+
+Prettier takes your code and reprints it from scratch by taking the line length into account.
 
 ## Project Requirements
 
@@ -129,12 +188,48 @@ To ensure a dynamic and responsive user experience:
 - deployed in Netlify
 - Mobile responsiveness to ensure accessibility on all devices.
 
-## Usage
+## Statistics
 
-InstaGit enriches your experience for viewing more GitHub repo and with the following features:
+### Languages
+| language | files | code | comment | blank | total |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| JSON | 3 | 7,507 | 0 | 3 | 7,510 |
+| JavaScript JSX | 14 | 755 | 23 | 90 | 868 |
+| CSS | 13 | 513 | 6 | 102 | 621 |
+| Markdown | 1 | 101 | 0 | 53 | 154 |
+| JavaScript | 2 | 26 | 1 | 3 | 30 |
+| HTML | 1 | 14 | 1 | 3 | 18 |
+| SVG | 2 | 2 | 0 | 0 | 2 |
 
-- ...
-- ...
+### Directories
+| path | files | code | comment | blank | total |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| . | 36 | 8,918 | 31 | 254 | 9,203 |
+| . (Files) | 6 | 7,476 | 2 | 61 | 7,539 |
+| public | 1 | 1 | 0 | 0 | 1 |
+| src | 29 | 1,441 | 29 | 193 | 1,663 |
+| src (Files) | 2 | 29 | 0 | 5 | 34 |
+| src\\assets | 1 | 1 | 0 | 0 | 1 |
+| src\\components | 17 | 921 | 19 | 131 | 1,071 |
+| src\\components\\contactForm | 2 | 148 | 0 | 25 | 173 |
+| src\\components\\footer | 2 | 93 | 0 | 15 | 108 |
+| src\\components\\gitHubCard | 1 | 19 | 0 | 5 | 24 |
+| src\\components\\header | 2 | 90 | 0 | 15 | 105 |
+| src\\components\\post | 2 | 89 | 4 | 15 | 108 |
+| src\\components\\searchBtn | 2 | 117 | 3 | 19 | 139 |
+| src\\components\\sideNav | 2 | 110 | 0 | 12 | 122 |
+| src\\components\\timeline | 2 | 78 | 4 | 9 | 91 |
+| src\\components\\userCard | 2 | 177 | 8 | 16 | 201 |
+| src\\data | 1 | 172 | 0 | 1 | 173 |
+| src\\pages | 6 | 233 | 10 | 37 | 280 |
+| src\\pages\\contact | 2 | 42 | 0 | 7 | 49 |
+| src\\pages\\home | 2 | 159 | 6 | 24 | 189 |
+| src\\pages\\homePage | 2 | 32 | 4 | 6 | 42 |
+| src\\styles | 2 | 85 | 0 | 19 | 104 |
+
+## Contributing
+
+If you'd like to contribute to this project, please follow the guidelines outlined in the CONTRIBUTING.md file.
 
 ## License
 
