@@ -124,8 +124,11 @@ const UserCard = () => {
               <span style={{ marginLeft: "5px" }}>LinkedIn</span>
             </a>
           </Center>
+          <GitHubCard
+            userName={login}
+            style={{ width: "100%", height: "auto" }}
+          />
         </Box>
-        <GitHubCard userName={login} />
       </div>
     );
   };
