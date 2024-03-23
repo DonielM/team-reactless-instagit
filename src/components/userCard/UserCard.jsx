@@ -61,7 +61,9 @@ const UserCard = () => {
     const linkedinUrl = `https://www.linkedin.com/in/${login}`;
 
     return (
-      <div key={login} className="usercard">
+ 
+        <div key={login} className="usercard">
+        
         <Box
           maxW="400px"
           bg="gray.100"
@@ -71,6 +73,7 @@ const UserCard = () => {
           borderWidth="1px"
           borderRadius="lg"
           shadow="md" // Add shadow
+          marginBottom="20px"
         >
           <Image
             src={avatarUrl}

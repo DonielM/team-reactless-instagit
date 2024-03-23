@@ -12,6 +12,7 @@ import anime from "animejs/lib/anime.es.js";
 import SearchBtn from "../../components/searchBtn/SearchBtn.jsx";
 import UserCard from "../../components/userCard/UserCard.jsx";
 import Homepage from "../homePage/Homepage.jsx";
+import Footer from "../../components/footer/footer.jsx"
 
 // Images
 import repoImg from "/src/assets/images/Repo.jpg";
@@ -48,7 +49,7 @@ function Home() {
           <div className="circle__row" onClick={startAnimation}>
             <div className="circle">
               <img className="circle-image" src={repoImg} />
-              <div className="circle-text">Git repositories hi</div>
+              <div className="circle-text">Git repositories </div>
             </div>
             <div className="circle">
               <img className="circle-image" src={parameterImg} />
@@ -59,7 +60,7 @@ function Home() {
                 className="circle-image"
                 src="https://images.unsplash.com/photo-1463438690606-f6778b8c1d10?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
               />
-              <div className="circle-text">Favorite REPO</div>
+              <div className="circle-text" >Favorite Users</div>
             </div>
           </div>
         </div>
@@ -68,6 +69,7 @@ function Home() {
       <SearchBtn />
       <UserCard />
       <Homepage />
+      <Footer/>
     </>
   );
 }

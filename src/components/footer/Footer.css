@@ -6,7 +6,7 @@ footer {
 
 }
 
-.sectionHeading h5 {
+.sectionHeading h3 {
     color: white;
     font-size: 30px;
     text-align: center;
@@ -19,16 +19,20 @@ p {
     font-size: 20px;
 
 }
+.input-group{
+    font-size: 20px;
+}
 
 .input-group-btn btn {
-    border-color: white;
+    
+    font-size: 20px;
 
 }
 
 @media screen and (max-width: 600px) {
     .sectionHeading h3 {
         color: white;
-        font-size: 30px;
+        font-size: 25px;
         text-align: center;
         margin-bottom: 30px;
     }

@@ -1,15 +1,30 @@
-.usercards-1{
+/* .usercards-1{
   max-width: 300px;
   height:300px;
-}
+} */
 
 .usercards-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; /* Adjust as needed */
+  justify-content: space-around;
 }
 
-.usercard {
+/* .usercard {
   width: 300px; /* Adjust the width of each card as needed */
+  /* margin: 10px; Adjust the margin between cards as needed
+}  */ 
+
+.timeline {
+  width: 100%; /* Adjust the width of each card as needed */
   margin: 10px; /* Adjust the margin between cards as needed */
 }
+
+@media screen and (max-width: 600px)  {
+
+  .timeline {
+    width: 500px; /* Adjust the width of each card as needed */
+    margin: 10px; /* Adjust the margin between cards as needed */
+  }
+
+}
+

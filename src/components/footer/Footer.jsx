@@ -33,6 +33,7 @@ function Footer() {
                                 <input
                                   type="text"
                                   className="form-control"
+                                  style={{fontSize:"16px"}}
                                   name="email"
                                   placeholder="Enter your  Github user name"
                                 ></input>

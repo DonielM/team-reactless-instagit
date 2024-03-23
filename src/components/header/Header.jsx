@@ -4,6 +4,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import logoImg from "/src/assets/images/InstaGitLogobyDesigner.png";
 import "./Header.css";
 
+
 function Header() {
   return (
     <nav className="navbar navbar-expand-lg bg-light ">
@@ -37,8 +38,13 @@ function Header() {
               </NavLink>
             </li>
             <li className="nav-item">
+            <a className="nav-link" href="#git-repositories-section">
+                Git Repositories
+              </a>
+            </li>
+            <li className="nav-item">
               <NavLink className="nav-link" to="/Contact">
-                Contact
+                Contact us
               </NavLink>
             </li>
           </ul>
