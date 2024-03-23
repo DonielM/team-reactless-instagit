@@ -1,37 +1,43 @@
-footer{
-    
+footer {
+
     padding: 30px 30px;
     background: linear-gradient(to top, #09203f 0%, #537895 100%);
-    color:aliceblue;
-    
+    color: aliceblue;
+
 }
-.sectionHeading h5{
+
+.sectionHeading h5 {
     color: white;
     font-size: 30px;
     text-align: center;
     margin-bottom: 30px;
 }
-.info h4,p{
+
+.info h4,
+p {
     text-align: left;
     font-size: 20px;
-  
+
 }
+
 .input-group-btn btn {
     border-color: white;
-    
+
 }
 
 @media screen and (max-width: 600px) {
-    .sectionHeading h3{
+    .sectionHeading h3 {
         color: white;
         font-size: 30px;
         text-align: center;
         margin-bottom: 30px;
     }
-    .info h4,p{
+
+    .info h4,
+    p {
         text-align: left;
         font-size: 20px;
-    
-}
+
+    }
 
 }

@@ -18,18 +18,15 @@
   font-weight: bolder;
 }
 
-.post__headerAuthor > span {
+.post__headerAuthor>span {
   color: grey;
   font-size: 15px;
 }
 
-.post__image > img {
+.post__image>img {
   width: 100%;
   border-radius: 6px;
   border: 0.6px solid rgba(128, 128, 128, 0.516);
-}
-
-.post__footer {
 }
 
 .post__footerIcons {
@@ -44,13 +41,14 @@
   padding: 7px;
   font-size: 30px;
   height: 50px;
-  font-size:"large";
+  font-size: "large";
 
 }
 
 .postIcon :hover {
   cursor: pointer;
 }
-.avatar{
+
+.avatar {
   height: 50px;
 }

@@ -1,0 +1,20 @@
+.usercards-1 {
+  max-width: 300px;
+  height: 300px;
+  border-color: grey;
+}
+
+.usercards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* Adjust as needed */
+  border-color: grey;
+}
+
+.usercard {
+  width: 300px;
+  /* Adjust the width of each card as needed */
+  margin: 10px;
+  /* Adjust the margin between cards as needed */
+}
