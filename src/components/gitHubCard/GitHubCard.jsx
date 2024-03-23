@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const GitHubCard = ({ userName }) => {
   const srcset = `https://github-readme-stats.vercel.app/api?username=${userName}&show_icons=true`;
-  const theme = "&theme=dark";
+  const theme = "&theme=white";
 
   return (
     <picture>

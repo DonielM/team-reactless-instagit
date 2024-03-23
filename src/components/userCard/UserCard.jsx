@@ -17,6 +17,7 @@ import {
 
 // Data
 import usersData from "../../data/users.json";
+import GitHubCard from "../gitHubCard/GitHubCard";
 
 const UserCard = () => {
   const renderUserCard = (
@@ -59,29 +60,51 @@ const UserCard = () => {
           </Heading>
           <Text>{bio}</Text>
           <Center my="6">
-            {/* GitHub button */}
-            <IconButton
-              as="a"
+            <a
               href={githubUrl}
               target="_blank"
-              aria-label="GitHub"
-              icon={<FaGithub />}
-              colorScheme="gray"
-              variant="outline"
-              mr="2"
-            />
-            {/* LinkedIn button */}
-            <IconButton
-              as="a"
+              rel="noopener noreferrer"
+              style={{
+                border: "1px solid gray",
+                borderRadius: "4px",
+                padding: "4px",
+                display: "inline-flex",
+                alignItems: "center",
+                marginRight: "10px",
+              }}
+            >
+              <IconButton
+                aria-label="GitHub"
+                icon={<FaGithub />}
+                colorScheme="gray"
+                variant="outline"
+                mr="2"
+              />
+              <span style={{ marginLeft: "5px" }}>GitHub</span>
+            </a>
+            <a
               href={linkedinUrl}
               target="_blank"
-              aria-label="LinkedIn"
-              icon={<FaLinkedin />}
-              colorScheme="gray"
-              variant="outline"
-            />
+              rel="noopener noreferrer"
+              style={{
+                border: "1px solid gray",
+                borderRadius: "4px",
+                padding: "4px",
+                display: "inline-flex",
+                alignItems: "center",
+              }}
+            >
+              <IconButton
+                aria-label="LinkedIn"
+                icon={<FaLinkedin />}
+                colorScheme="gray"
+                variant="outline"
+              />
+              <span style={{ marginLeft: "5px" }}>LinkedIn</span>
+            </a>
           </Center>
         </Box>
+        <GitHubCard userName={login} />
       </div>
     );
   };
