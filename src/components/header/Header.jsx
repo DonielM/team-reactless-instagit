@@ -38,7 +38,7 @@ function Header() {
               </NavLink>
             </li>
             <li className="nav-item">
-            <a className="nav-link" href="#git-repositories-section">
+            <a className="nav-link" href="/#git-repositories-section">
                 Git Repositories
               </a>
             </li>
