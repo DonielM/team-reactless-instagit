@@ -45,9 +45,9 @@ function Post({ user, postImage, following, likes, timestamp }) {
 Post.propTypes = {
   user: PropTypes.string.isRequired,
   postImage: PropTypes.string.isRequired,
-  following: PropTypes.bool.isRequired,
+  // following: PropTypes.bool.isRequired,
   likes: PropTypes.number.isRequired,
-  timestamp: PropTypes.string.isRequired,
+  // timestamp: PropTypes.string.isRequired,
 };
 
 export default Post;

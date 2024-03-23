@@ -1,9 +1,11 @@
 // Hooks
+import { useEffect, useState } from "react";
 
 // Icons
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 // Components
+import GitHubCard from "../gitHubCard/GitHubCard";
 import {
   Box,
   Image,
@@ -17,9 +19,33 @@ import {
 
 // Data
 import usersData from "../../data/users.json";
-import GitHubCard from "../gitHubCard/GitHubCard";
 
 const UserCard = () => {
+  const gitHubUrl = `https://github.com/`;
+
+  const [userData, setUserData] = useState(usersData);
+
+  const usersNames = userData.map((user) => user.login);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const promises = usersNames.map((username) =>
+          fetch(`${gitHubUrl}users/${username}`).then((response) =>
+            response.json()
+          )
+        );
+
+        const userDataFromAPI = await Promise.all(promises);
+        setUserData(userDataFromAPI);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, [gitHubUrl, usersNames]);
+
   const renderUserCard = (
     login,
     avatarUrl,
@@ -28,18 +54,18 @@ const UserCard = () => {
     followingAmount,
     bio
   ) => {
-    const githubUrl = `https://github.com/${login}`;
-    const reposUrl = `${githubUrl}?tab=repositories`;
-    const followingUrl = `${githubUrl}?tab=following`;
-    const followersUrl = `${githubUrl}?tab=followers`;
+    const url = `$${gitHubUrl}${login}`;
+    const reposUrl = `${url}?tab=repositories`;
+    const followingUrl = `${url}?tab=following`;
+    const followersUrl = `${url}?tab=followers`;
     const linkedinUrl = `https://www.linkedin.com/in/${login}`;
 
     return (
       <div key={login} className="usercard">
         <Box
           maxW="400px"
-          bg="gray.100" // Change background color to gray
-          white
+          bg="gray.100"
+          // white
           p="6"
           mt="6"
           borderWidth="1px"
@@ -82,7 +108,7 @@ const UserCard = () => {
           <Text>{bio}</Text>
           <Center my="6">
             <a
-              href={githubUrl}
+              href={url}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -136,7 +162,7 @@ const UserCard = () => {
   return (
     <>
       <div className="usercards-container">
-        {usersData.map((user) =>
+        {userData.map((user) =>
           renderUserCard(
             user.login,
             user.avatar_url,
