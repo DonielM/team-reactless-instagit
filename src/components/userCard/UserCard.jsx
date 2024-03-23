@@ -64,8 +64,8 @@ const UserCard = () => {
       <div key={login} className="usercard">
         <Box
           maxW="400px"
-          bg="gray.100" // Change background color to gray
-          white
+          bg="gray.100"
+          // white
           p="6"
           mt="6"
           borderWidth="1px"
