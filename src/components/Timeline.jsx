@@ -1,11 +1,16 @@
-import React, { useState } from "react";
-import Post from "./Posts";
+import { useState } from "react";
+
+// Components
+import Post from "../components/post/Posts.jsx";
+
+// Styles
 import "../styles/Timeline.css";
+
+// Images
 import wwGif from "../assets/images/WWdemo.gif";
 import schedulerGif from "../assets/images/scheduler.gif";
 import passwordGif from "../assets/images/PasswordGen.gif";
 import javaQuizGif from "../assets/images/JavaQuiz.gif";
-
 
 function Timeline() {
   const [posts, setPosts] = useState([
@@ -26,7 +31,7 @@ function Timeline() {
       postImage: passwordGif,
       likes: 140,
       timestamp: "2d",
-    },  
+    },
     {
       user: "kobee_18",
       postImage: javaQuizGif,
@@ -48,22 +53,21 @@ function Timeline() {
       {postsRows.map((row, index) => (
         <div key={index} className="row mb-3">
           {row.map((post, postIndex) => (
-            <div key={postIndex} className="col-lg-6 d-flex justify-content-center">
-          
-            <Post
-              user={post.user}
-              postImage={post.postImage}
-              likes={post.likes}
-              timestamp={post.timestamp}
-            />
+            <div
+              key={postIndex}
+              className="col-lg-6 d-flex justify-content-center"
+            >
+              <Post
+                user={post.user}
+                postImage={post.postImage}
+                likes={post.likes}
+                timestamp={post.timestamp}
+              />
             </div>
-          ))}  
+          ))}
         </div>
-          ))}  
+      ))}
     </div>
-      
-
-    
   );
 }
 
