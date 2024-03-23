@@ -17,6 +17,7 @@ import {
 
 // Data
 import usersData from "../../data/users.json";
+import GitHubCard from "../gitHubCard/GitHubCard";
 
 const UserCard = () => {
   const renderUserCard = (
@@ -124,6 +125,7 @@ const UserCard = () => {
             </a>
           </Center>
         </Box>
+        <GitHubCard userName={login} />
       </div>
     );
   };
