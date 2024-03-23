@@ -10,8 +10,8 @@ import anime from "animejs/lib/anime.es.js";
 
 // Components
 import SearchBtn from "../../components/searchBtn/SearchBtn.jsx";
-import UserCard from "../../components/UserCard";
-import Homepage from "../../pages/homePage/Homepage.jsx";
+import UserCard from "../../components/userCard/UserCard.jsx";
+import Homepage from "../homePage/Homepage.jsx";
 
 // Images
 import repoImg from "/src/assets/images/Repo.jpg";

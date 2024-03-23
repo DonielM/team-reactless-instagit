@@ -1,4 +1,7 @@
-import React, { useState, useEffect } from "react";
+// Hooks
+import { useState, useEffect } from "react";
+
+// Components
 import {
   Box,
   Image,
@@ -10,21 +13,25 @@ import {
   Button,
 } from "@chakra-ui/react";
 
-function UserCard() {
-  const userURL = "https://api.github.com/users/";
-  const reposURL = "https://api.github.com/users/";
+const UserCard = () => {
+  const gitHubUrl = "https://api.github.com/users/";
+
   const [userData, setUserData] = useState({});
   const [reposData, setReposData] = useState({});
 
-  const [usernames] = useState(["FilipPaskalev", "vickyw0102", "Doniel","irtiza-S","Aysegulozen"]);
+  const [usernames] = useState([
+    "FilipPaskalev",
+    "vickyw0102",
+    "Doniel",
+    "irtiza-S",
+    "Aysegulozen",
+  ]);
 
   useEffect(() => {
     const fetchData = async (username) => {
       try {
-        const response = await fetch(userURL + username, {
-          headers: {
-            // Authorization: `token ${token}`,
-          },
+        const response = await fetch(gitHubUrl + username, {
+          headers: {},
         });
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -34,11 +41,9 @@ function UserCard() {
           ...prevData,
           [username]: userData,
         }));
-    
-        const reposResponse = await fetch(reposURL + username + "/repos", {
-          headers: {
-            // Authorization: `token ${token}`,
-          },
+
+        const reposResponse = await fetch(gitHubUrl + username + "/repos", {
+          headers: {},
         });
         if (!reposResponse.ok) {
           throw new Error(`HTTP error! status: ${reposResponse.status}`);
@@ -92,6 +97,6 @@ function UserCard() {
       </div>
     </>
   );
-}
+};
 
 export default UserCard;
