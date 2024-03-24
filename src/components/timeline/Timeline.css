@@ -8,7 +8,21 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+.post-container {
+  position: relative;
+}
 
+.screenshot-link {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: underline;
+}
+
+.screenshot-link a:hover{
+  color: orange
+}
 /* .usercard {
   width: 300px; /* Adjust the width of each card as needed */
   /* margin: 10px; Adjust the margin between cards as needed
@@ -22,7 +36,7 @@
 @media screen and (max-width: 600px)  {
 
   .timeline {
-    width: 500px; /* Adjust the width of each card as needed */
+    width: 100%; /* Adjust the width of each card as needed */
     margin: 10px; /* Adjust the margin between cards as needed */
   }
 
