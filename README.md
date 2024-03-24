@@ -36,6 +36,7 @@ Instagram for GitHub users to share profiles access repos and sign up.
 ## Website Preview
 
 Here's a look at the InstaGit web application.
+![Alt Text](./src/assets/images/InstaGit.gif)
 
 Home page:
 - with Anime.js library in banner area;
